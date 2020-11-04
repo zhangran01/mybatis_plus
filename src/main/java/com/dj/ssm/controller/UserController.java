@@ -31,7 +31,7 @@ public class UserController {
     }
 
     @RequestMapping("get")
-    public ResultModel<Object> get (Integer id){
+    public ResultModel<Object> get(Integer id) {
         try {
             User user = userService.getById(id);
             return new ResultModel().success(user);
@@ -43,11 +43,12 @@ public class UserController {
 
     /**
      * 删除
+     *
      * @param id
      * @return
      */
     @RequestMapping("delete")
-    public ResultModel<Object> delete (Integer id){
+    public ResultModel<Object> delete(Integer id) {
         try {
             userService.removeById(id);
             return new ResultModel().success(true);
@@ -59,11 +60,12 @@ public class UserController {
 
     /**
      * 修改
+     *
      * @param user
      * @return
      */
     @RequestMapping("update")
-    public ResultModel<Object> update (User user){
+    public ResultModel<Object> update(User user) {
         try {
             userService.updateById(user);
             return new ResultModel().success(true);
@@ -83,7 +85,7 @@ public class UserController {
      * 查询单条
      *
      * @param userName 用户名
-     * @param userPwd 密码
+     * @param userPwd  密码
      * @return
      */
     @RequestMapping("getOne")
@@ -101,8 +103,6 @@ public class UserController {
             return new ResultModel().error(e.getMessage());
         }
     }
-
-
 
 
 }

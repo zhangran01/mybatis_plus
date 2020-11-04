@@ -2,16 +2,16 @@
 <Configuration>
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
-			<PatternLayout pattern="log4j2 %d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
-		</Console>
+            <PatternLayout pattern="log4j2 %d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
     </Appenders>
     <Loggers>
         <logger name="org.spring" additivity="false" level="debug">
-			<AppenderRef ref="Console" />
-		</logger>
-		<logger name="com.dj" additivity="false" level="debug">
-			<AppenderRef ref="Console" />
-		</logger>
+            <AppenderRef ref="Console"/>
+        </logger>
+        <logger name="com.dj" additivity="false" level="debug">
+            <AppenderRef ref="Console"/>
+        </logger>
         <Root level="info">
             <AppenderRef ref="Console"/>
         </Root>
